@@ -337,19 +337,48 @@
             Have a project in mind, a collaboration opportunity, or an opportunity to discuss? Feel free to reach out —
             I’m always open to new conversations.</p>
 
-        <form action="" class="max-w-2xl mx-auto">
-            <div class="grid grid-auto gap-6 mt-10 mb-8">
-                <input type="text" placeholder="Enter your name"
-                    class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-gray-900/30 dark:border-white/90">
-                <input type="text" placeholder="Enter your email"
-                    class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-gray-900/30 dark:border-white/90">
-            </div>
-            <textarea rows="6" placeholder="Enter your message"
-                class="w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6 dark:bg-gray-900/30 dark:border-white/90"></textarea>
-            <button
-                class="py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500 dark:bg-transparent dark:border-[0.5px] dark:hover:bg-gray-900">Submit
-                now <img src="./images/right-arrow-white.png" alt="" class="w-4"></button>
-        </form>
+       <form method="POST" action="https://api.web3forms.com/submit" class="max-w-2xl mx-auto">
+
+    <!-- Web3Forms Access Key -->
+    <input type="hidden" name="access_key" value="3c7ae428-9687-4b96-8ec3-75961585078e">
+
+    <!-- Optional (recommended) -->
+    <input type="hidden" name="subject" value="New Message from Portfolio">
+    <input type="hidden" name="from_name" value="Varshini Portfolio">
+
+    <div class="grid grid-auto gap-6 mt-10 mb-8">
+        <input 
+            type="text" 
+            name="name"
+            placeholder="Enter your name"
+            required
+            class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-gray-900/30 dark:border-white/90">
+
+        <input 
+            type="email" 
+            name="email"
+            placeholder="Enter your email"
+            required
+            class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-gray-900/30 dark:border-white/90">
+    </div>
+
+    <textarea 
+        rows="6" 
+        name="message"
+        placeholder="Enter your message"
+        required
+        class="w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6 dark:bg-gray-900/30 dark:border-white/90">
+    </textarea>
+
+    <button
+        type="submit"
+        class="py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500 dark:bg-transparent dark:border-[0.5px] dark:hover:bg-gray-900">
+        Submit now 
+        <img src="./images/right-arrow-white.png" alt="" class="w-4">
+    </button>
+
+</form>
+
     </div>
 
 
